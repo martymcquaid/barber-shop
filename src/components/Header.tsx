@@ -5,34 +5,31 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-slate-900 text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <div className="flex items-center">
-          <button aria-label="Open menu" className="md:hidden mr-2" onClick={() => setMenuOpen(!menuOpen)}>
-            <span className="block w-6 h-0.5 bg-white mb-1"></span>
-            <span className="block w-6 h-0.5 bg-white"></span>
-          </button>
-          <span className="text-xl font-semibold">Barbershop Online</span>
+    <header className="bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm fixed w-full z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="flex items-center space-x-3">
+          <span className="text-2xl font-display font-semibold tracking-tight">Barbershop Online</span>
         </div>
-        <nav className="hidden md:flex space-x-6">
-          <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/about">About</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/faqs">FAQs</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/account/customer">My Account</Link>
+        <nav className="hidden md:flex space-x-6 font-semibold text-slate-800">
+          <Link to="/" className="hover:text-brand-600">Home</Link>
+          <Link to="/services" className="hover:text-brand-600">Services</Link>
+          <Link to="/about" className="hover:text-brand-600">About</Link>
+          <Link to="/blog" className="hover:text-brand-600">Blog</Link>
+          <Link to="/faqs" className="hover:text-brand-600">FAQs</Link>
+          <Link to="/contact" className="hover:text-brand-600">Contact</Link>
+          <Link to="/account/customer" className="hover:text-brand-600">My Account</Link>
         </nav>
         <div className="hidden md:flex items-center space-x-3">
-          <button aria-label="Notifications" className="relative p-2 rounded-full bg-slate-700 hover:bg-slate-600">
-            <span>🔔</span>
-            <span className="absolute -top-1 -right-1 bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">3</span>
-          </button>
+          <Link to="/contact" className="bg-brand-500 hover:bg-brand-600 text-white px-4 py-2 rounded-lg shadow">Book Now</Link>
         </div>
+        <button aria-label="Open menu" className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+          <span className="block w-6 h-0.5 bg-slate-900 mb-1"></span>
+          <span className="block w-6 h-0.5 bg-slate-900"></span>
+        </button>
       </div>
       {menuOpen && (
-        <div className="md:hidden bg-slate-800 p-4">
-          <nav className="flex flex-col space-y-2">
+        <div className="md:hidden bg-white/95 border-b border-slate-200">
+          <nav className="flex flex-col p-4 space-y-2">
             <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
             <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>
             <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
