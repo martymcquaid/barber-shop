@@ -1,4 +1,5 @@
-import Layout from '../components/Layout'\nimport { useState } from 'react'
+import Layout from '../components/Layout'
+import { useState } from 'react'
 
 export default function LoginCustomer(){
   const [email, setEmail] = useState('')
