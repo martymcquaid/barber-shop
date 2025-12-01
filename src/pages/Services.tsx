@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 import ServiceCard from '../components/ServiceCard'
-import React from 'react'
+
 
 const services = [
   {
