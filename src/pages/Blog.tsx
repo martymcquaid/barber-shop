@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import React from 'react'
+
 
 const posts = [
   { title: '5 Tips for Healthy Hair', description: 'Simple routines to keep hair strong and shiny.', image: 'https://images.unsplash.com/photo-1521335629791-ce4aec67dd89?q=80&w=1200&auto=format&fit=crop' },
