@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 export default function Contact(){
   const [name, setName] = useState('');
