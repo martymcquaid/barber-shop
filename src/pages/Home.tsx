@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import Carousel from '../components/Carousel'
+import Carousel from '../components/Carousel.tsx'
 
 export default function Home() {
   const carouselImages = [
