@@ -1,32 +1,11 @@
 import Layout from '../components/Layout'
 import ServiceCard from '../components/ServiceCard'
 
-
 const services = [
-  {
-    title: 'Classic Haircut',
-    description: 'A timeless cut tailored to your hair type and face shape.',
-    price: '25',
-    image: 'https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=1200&auto=format&fit=crop',
-  },
-  {
-    title: 'Style & Color',
-    description: 'Bold color with precise shaping and finish.',
-    price: '60',
-    image: 'https://images.unsplash.com/photo-1525973454080-7f0f1d1b8eca?q=80&w=1200&auto=format&fit=crop',
-  },
-  {
-    title: 'Scalp Treatment',
-    description: 'Revitalizing scalp massage and cleansing.',
-    price: '30',
-    image: 'https://images.unsplash.com/photo-1499951360447-b190f3a4d4d0?q=80&w=1200&auto=format&fit=crop',
-  },
-  {
-    title: 'Beard Trim',
-    description: 'Neat beard shaping and grooming.',
-    price: '20',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop',
-  },
+  { title: 'Classic Haircut', description: 'A timeless cut tailored to your hair type and face shape.', price: '25', image: 'https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=1200&auto=format&fit=crop' },
+  { title: 'Style & Color', description: 'Bold color with precise shaping and finish.', price: '60', image: 'https://images.unsplash.com/photo-1525973454080-7f0f1d1b8eca?q=80&w=1200&auto=format&fit=crop' },
+  { title: 'Scalp Treatment', description: 'Revitalizing scalp massage and cleansing.', price: '30', image: 'https://images.unsplash.com/photo-1499951360447-b190f3a4d4d0?q=80&w=1200&auto=format&fit=crop' },
+  { title: 'Beard Trim', description: 'Neat beard shaping and grooming.', price: '20', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop' },
 ];
 
 export default function Services() {
@@ -40,6 +19,7 @@ export default function Services() {
             <ServiceCard key={idx} title={s.title} description={s.description} price={s.price} image={s.image} />
           ))}
         </div>
+        <div className="pt-4 text-sm text-slate-600">Prices shown are starting from values. Contact us for premium options.</div>
       </section>
       <aside aria-label="Categories" className="hidden md:block md:col-span-1"></aside>
     </Layout>
