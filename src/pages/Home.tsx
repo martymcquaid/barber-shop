@@ -10,14 +10,17 @@ export default function Home() {
 
   return (
     <Layout>
-      <section className="grid md:grid-cols-2 gap-8 items-center py-12">
-        <div>
-          <h1 className="text-4xl font-bold mb-4">Welcome to Barbershop Online</h1>
-          <p className="text-slate-700 mb-4">Convenient scheduling, customizable styles, and live chat support — all in one place.</p>
-          <button className="bg-slate-800 hover:bg-slate-700 text-white py-2 px-4 rounded">Book a Visit</button>
+      <section className="grid md:grid-cols-2 gap-8 items-center py-12 bg-gradient-to-br from-slate-800 to-slate-900 text-white rounded-lg shadow-md">
+        <div className="p-6">
+          <h1 className="text-4xl md:text-5xl font-display font-extrabold mb-4">Premium Grooming Online</h1>
+          <p className="text-slate-100 mb-6">Scheduling, styling, and live support with a concierge feel—designed for a premium experience.</p>
+          <div className="flex space-x-4">
+            <button className="bg-brand-500 hover:bg-brand-600 text-white py-3 px-5 rounded-lg shadow">Get Started</button>
+            <button className="bg-white/20 border border-white text-white py-3 px-5 rounded-lg">Learn More</button>
+          </div>
         </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?q=80&w=1200&auto=format&fit=crop" alt="Barber at work" className="w-full rounded-lg shadow" />
+        <div className="p-6 hidden md:block">
+          <img src="https://images.unsplash.com/photo-1524502083-dc5a60f91a5f?q=80&w=1200&auto=format&fit=crop" alt="Premium barber" className="w-full rounded-lg shadow" />
         </div>
       </section>
 
@@ -28,7 +31,7 @@ export default function Home() {
       <section id="about" className="py-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-semibold mb-2">About Barbershop Online</h2>
-          <p className="text-slate-600">We bring the traditional barbershop experience online with easy scheduling, tailored styles, and real-time support.</p>
+          <p className="text-slate-700">We blend traditional barber craft with modern online services to offer flexible scheduling, personalized styling, and a welcoming experience.</p>
         </div>
       </section>
     </Layout>
