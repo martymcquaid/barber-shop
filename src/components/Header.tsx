@@ -23,6 +23,12 @@ export default function Header() {
           <Link to="/contact">Contact</Link>
           <Link to="/account/customer">My Account</Link>
         </nav>
+        <div className="hidden md:flex items-center space-x-3">
+          <button aria-label="Notifications" className="relative p-2 rounded-full bg-slate-700 hover:bg-slate-600">
+            <span>🔔</span>
+            <span className="absolute -top-1 -right-1 bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">3</span>
+          </button>
+        </div>
       </div>
       {menuOpen && (
         <div className="md:hidden bg-slate-800 p-4">
