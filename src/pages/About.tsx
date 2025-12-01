@@ -1,6 +1,5 @@
 import Layout from '../components/Layout'
 
-
 export default function About() {
   const team = [
     { name: 'Alex Carter', role: 'Founder / Master Barber', bio: 'Over 15 years crafting classic and modern looks.', image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop' },
@@ -15,18 +14,18 @@ export default function About() {
 
   return (
     <Layout>
-      <section aria-label="Introduction" className="py-8">
+      <section aria-label="Introduction" className="py-6 bg-gradient-to-br from-slate-800 to-slate-900 text-white rounded-lg shadow-md mb-6 p-6">
         <h1 className="text-3xl font-semibold mb-2">About Barbershop Online</h1>
-        <p className="text-slate-700">We blend traditional barber craft with modern online services to offer flexible scheduling, personalized styling, and a welcoming experience.</p>
+        <p className="text-slate-200">We blend traditional barber craft with modern online services to offer flexible scheduling, personalized styling, and a welcoming experience.</p>
       </section>
       <section aria-label="Team" className="py-8">
         <h2 className="text-2xl font-semibold mb-4">Team</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {team.map((t, idx) => (
-            <div key={idx} className="flex items-center space-x-4 bg-white p-4 rounded-lg shadow-sm">
+            <div key={idx} className="flex items-center space-x-4 bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
               <img src={t.image} alt={t.name} className="w-20 h-20 rounded-full object-cover" />
               <div>
-                <div className="font-semibold">{t.name}</div>
+                <div className="font-semibold text-lg">{t.name}</div>
                 <div className="text-sm text-gray-600">{t.role}</div>
                 <p className="text-sm text-gray-500 mt-1">{t.bio}</p>
               </div>
@@ -49,3 +48,4 @@ export default function About() {
     </Layout>
   )
 }
+
