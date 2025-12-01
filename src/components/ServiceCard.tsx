@@ -1,4 +1,4 @@
-import React from 'react';
+import {} from 'react';
 
 export default function ServiceCard({ title, description, price, image }: { title: string; description: string; price: string; image: string; }) {
   return (
